@@ -3,8 +3,11 @@
 
 const nav = document.querySelectorAll('a');                          // nav events
 
-
+nav.forEach(item => item.addEventListener('click', (e) => {
+    e.preventDefault();
+}));
 nav.forEach(item => item.addEventListener('mouseover', (e) => {
+    e.preventDefault();
     item.style.fontSize = '3rem';
 }));
 
